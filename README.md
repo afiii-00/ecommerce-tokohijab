@@ -1,6 +1,6 @@
-# Toko Kila (Sakila Store) - E-Commerce Hijab Premium
+# Toko Kila - E-Commerce Hijab Premium
 
-Toko Kila (Sakila Store) adalah aplikasi e-commerce sederhana berbasis web yang dirancang khusus untuk mempermudah penjualan produk hijab premium secara online. Aplikasi ini menggunakan integrasi WhatsApp Checkout instan, memungkinkan pembeli memesan produk secara langsung ke nomor WhatsApp penjual dengan format pesan yang sudah tersusun rapi.
+Toko Kila adalah aplikasi e-commerce sederhana berbasis web yang dirancang khusus untuk mempermudah penjualan produk hijab premium secara online. Aplikasi ini menggunakan integrasi WhatsApp Checkout instan, memungkinkan pembeli memesan produk secara langsung ke nomor WhatsApp penjual dengan format pesan yang sudah tersusun rapi.
 
 ## 🚀 Fitur Utama
 

@@ -37,7 +37,7 @@ $cart_toggle_url = $is_open ? 'index.php' : 'index.php?open_cart=1';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sakila Store</title>
+  <title>Toko Kila</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@ $cart_toggle_url = $is_open ? 'index.php' : 'index.php?open_cart=1';
       <h1>Toko Kila</h1>
       <p>
         Hijab premium untuk muslimah modern.
-        Sakila Store hadir untuk memberikan hijab berkualitas tinggi dengan desain elegan, nyaman dipakai, dan mudah diatur untuk setiap aktivitasmu.
+        Toko Kila hadir untuk memberikan hijab berkualitas tinggi dengan desain elegan, nyaman dipakai, dan mudah diatur untuk setiap aktivitasmu.
       </p>
       <a href="#product-section"><button>Belanja Sekarang!</button></a>
     </div>
@@ -76,7 +76,7 @@ $cart_toggle_url = $is_open ? 'index.php' : 'index.php?open_cart=1';
   <section class="about-section">
     <h2>Tentang kami</h2>
     <p>
-      Sakila Store adalah brand hijab lokal yang berdedikasi menghadirkan produk hijab premium dengan kualitas terbaik.
+      Toko Kila adalah brand hijab lokal yang berdedikasi menghadirkan produk hijab premium dengan kualitas terbaik.
       Kami berkomitmen untuk memenuhi kebutuhan muslimah modern yang menginginkan hijab lembut, nyaman, mudah dibentuk, serta tetap stylish dalam berbagai kesempatan.<br><br>
       Dipilih dengan teliti dari bahan terbaik dan diproses dengan standar tinggi untuk memastikan kepuasan setiap pelanggan.
     </p>
@@ -215,7 +215,7 @@ $cart_active = (isset($_GET['open_cart']) || isset($_GET['action'])) ? 'active' 
   <section class="fade-in">
     <div class="container">
       <h2 class="section-title">Rating</h2>
-      <p class="section-subtitle">Prinsip yang menjadi fondasi Sakila Store dalam melayani setiap muslimah.</p>
+      <p class="section-subtitle">Prinsip yang menjadi fondasi Toko Kila dalam melayani setiap muslimah.</p>
       <div class="values-grid">
         <div class="value-card">
           <div class="value-icon">
@@ -272,7 +272,7 @@ $cart_active = (isset($_GET['open_cart']) || isset($_GET['action'])) ? 'active' 
   <section class="fade-in" style="background: #faf9fb;">
     <div class="container">
       <h2 class="section-title">Mengapa Memilih Toko kila?</h2>
-      <p class="section-subtitle">Alasan muslimah mempercayakan kebutuhan hijabnya kepada Sakila Store.</p>
+      <p class="section-subtitle">Alasan muslimah mempercayakan kebutuhan hijabnya kepada Toko Kila.</p>
       <div class="why-choose-grid">
         <div class="why-card">
           <div class="why-icon">
@@ -342,7 +342,7 @@ $cart_active = (isset($_GET['open_cart']) || isset($_GET['action'])) ? 'active' 
   </section>
 </section>
   <footer>
-    <p>© 2026 Sakila Store</p>
+    <p>© 2026 Toko Kila</p>
   </footer>
   <script>
     document.addEventListener('DOMContentLoaded', function() {

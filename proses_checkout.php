@@ -16,7 +16,7 @@ $payment = mysqli_real_escape_string($conn, $_POST['payment']);
 // Membangun daftar item, total harga, dan pesan WhatsApp dari sisi server
 $items_arr = [];
 $total = 0;
-$message = "Halo Sakila Store, saya ingin memesan:\n\n";
+$message = "Halo Toko Kila, saya ingin memesan:\n\n";
 $no = 1;
 
 foreach ($_SESSION['cart'] as $id => $qty) {
@@ -53,7 +53,7 @@ $message .= "\n*Total: Rp " . number_format($total, 0, ',', '.') . "*";
 $message .= "\n\nMetode Pembayaran: $payment";
 
 if ($payment === 'Transfer BCA') {
-    $message .= "\nBank BCA\nNo Rekening: 6821700148\nAtas Nama: Sakila Store";
+    $message .= "\nBank BCA\nNo Rekening: 6821700148\nAtas Nama: Toko Kila";
 }
 
 $message .= "\n\nNama: $nama";
