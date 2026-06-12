@@ -193,7 +193,7 @@ $cart_active = (isset($_GET['open_cart']) || isset($_GET['action'])) ? 'active' 
 
           <div id="qris-info" style="background: #f8f8f8; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
               <h4>Pembayaran QRIS</h4>
-              <img src="admin/upload/qr.jpeg" width="200">
+              <img src="admin/upload/qr.jpeg?v=<?= time(); ?>" width="200">
               <p>Silakan scan QRIS untuk melakukan pembayaran.</p>
           </div>
 
