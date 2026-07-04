@@ -1,0 +1,13 @@
+Options -Indexes
+
+# Blokir akses langsung ke semua file PHP admin kecuali login
+# (Uncomment baris ini jika ingin restrict by IP di production)
+# <FilesMatch "\.php$">
+#     Order Deny,Allow
+#     Deny from all
+#     Allow from 123.456.789.000   # IP kamu
+# </FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>

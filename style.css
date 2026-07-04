@@ -1,0 +1,816 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff5f7;
+  color: #333;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* CONTAINER UTAMA SECTION */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #b04d6d;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: #f8e9ec;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  color: #b04d6d;
+}
+
+.hero-text h2 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: #b04d6d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #8d3b56;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 20px;
+}
+
+/* ABOUT SECTION */
+/* ABOUT */
+.about {
+  padding: 50px 20px;
+  text-align: center; /* Menjaga judul "About Us" tetap di tengah */
+}
+
+.about h2 {
+  color: #b04d6d;
+  margin-bottom: 20px;
+}
+
+/* Selector baru untuk membuat teks paragrafnya rata kanan-kiri */
+.about p {
+  text-align: justify;       /* Membuat teks rata kanan-kiri */
+  max-width: 800px;          /* Membatasi lebar teks agar nyaman dibaca */
+  margin: 0 auto;            /* Membawa blok teks ke posisi tengah halaman */
+  line-height: 1.8;          /* Memberikan jarak antar baris agar tidak terlalu rapat */
+}
+
+/* VISION & MISSION */
+.vision {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+}
+
+.box {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.box h3 {
+  color: #b04d6d;
+  font-size: 24px;
+}
+
+.box ul {
+  padding-left: 20px;
+}
+
+.box ul li {
+  margin-bottom: 8px;
+}
+
+/* OUR VALUES SECTION */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d63384, #8b1e3f);
+}
+
+.value-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffe4e6, #f8e1e3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+  color: #d63384;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1) rotate(10deg);
+  background: linear-gradient(135deg, #d63384, #8b1e3f);
+  color: white;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  color: #8b1e3f;
+  margin-bottom: 15px;
+}
+
+/* PRODUCT SECTION */
+.product {
+  padding: 50px;
+  text-align: center;
+}
+
+.product h2 {
+  margin-bottom: 30px;
+  color: #b04d6d;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #b04d6d;
+}
+
+.add-to-cart {
+  padding: 8px 15px;
+  font-size: 12px;
+  width: 100%;
+}
+
+/* WHY CHOOSE US SECTION */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #d63384, #8b1e3f);
+  border-radius: 50%; /* Menjadikannya lingkaran sempurna */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover .why-icon {
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.why-card h4 {
+  font-size: 18px;
+  color: #8b1e3f;
+  margin-bottom: 5px;
+}
+
+/* KERANJANG STYLE */
+#cart-items li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* CONTACT SECTION */
+.contact {
+  background: #b04d6d;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #8d3b56;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE LAYOUT MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .hero-text {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .hero-text h1 {
+    font-size: 40px;
+  }
+  .hero-text h2 {
+    font-size: 28px;
+  }
+  .vision {
+    flex-direction: column;
+  }
+}
+/* GAYA TOMBOL HAPUS DI KERANJANG */
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Membuat teks dan tombol sejajar di tengah */
+  background: #fbfbfb;
+  margin-bottom: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.delete-btn {
+  background: #dc3545; /* Warna merah */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #bd2130; /* Warna merah lebih gelap saat di-hover */
+}
+
+.delete-btn i {
+  margin-right: 4px; /* Jarak antara ikon sampah dengan tulisan 'Hapus' */
+}
+
+/* Membuat container utama membagi menjadi 2 kolom */
+.about-container {
+  display: flex;
+  gap: 40px; /* Jarak antara kolom kiri dan kanan */
+  align-items: flex-start; /* Membuat konten rata atas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mengatur kolom kiri (About Us) mengambil 50% ruang */
+.product {
+  flex: 1;
+}
+
+/* Mengatur kolom kanan (Vision & Mission) mengambil 50% ruang */
+.vision {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Jarak antara kotak Vision dan kotak Mission */
+}
+
+/* Opsional: Membuat tampilan kotak Vision & Mission lebih rapi */
+.box {
+  background-color: #f9f9f9; /* Beri warna background tipis jika suka */
+  padding: 15px;
+  border-radius: 8px;
+}
+@media(max-width:768px){
+
+.hero{
+padding:20px;
+}
+
+.hero-image img{
+width:100%;
+max-width:300px;
+}
+
+.product-list{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+.values-grid,
+.why-choose-grid{
+grid-template-columns:1fr;
+}
+table{
+font-size:12px;
+overflow-x:auto;
+display:block;
+}
+
+button{
+width:100%;
+}
+
+}
+
+/* ICON KERANJANG */
+.cart-icon{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#b04d6d;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    font-size:22px;
+}
+
+.cart-icon span{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    background:red;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* SIDEBAR KERANJANG */
+.cart-sidebar{
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:350px;
+    height:100%;
+    background:white;
+    padding:20px;
+    overflow-y:auto;
+    z-index:9998;
+    transition:.3s;
+    box-shadow:-5px 0 15px rgba(0,0,0,.1);
+}
+
+.cart-sidebar.active{
+    right:0;
+}
+
+.cart-sidebar h2{
+    margin-bottom:20px;
+    color:#b04d6d;
+}
+
+/* tombol plus minus keranjang */
+#cart-items .qty-control button.qty-btn{
+    width:28px !important;
+    height:28px !important;
+    min-width:28px !important;
+    padding:0 !important;
+    margin:0 !important;
+
+    border-radius:50% !important;
+    border:1px solid #b04d6d !important;
+
+    background:white !important;
+    color:#b04d6d !important;
+
+    font-size:18px !important;
+    line-height:25px !important;
+}
+
+/* posisi tombol */
+#cart-items .qty-control{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+    margin-top:10px;
+}
+
+/* angka jumlah */
+#cart-items .qty-number{
+    font-size:18px !important;
+    font-weight:bold;
+    min-width:15px;
+    text-align:center;
+}
+
+.qty-btn:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   WHATSAPP CHAT WIDGET — "Tanya Kila"
+   ============================================================ */
+
+/* Tombol floating WA */
+.wa-chat-btn {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    cursor: pointer;
+    filter: drop-shadow(0 6px 18px rgba(37,211,102,.45));
+    transition: transform 0.25s cubic-bezier(.34,1.56,.64,1);
+}
+
+.wa-chat-btn:hover {
+    transform: scale(1.08);
+}
+
+/* Lingkaran ikon WA */
+.wa-chat-btn .wa-circle {
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(135deg, #25d366 60%, #128c3e);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(37,211,102,.4);
+}
+
+/* Animasi ping */
+.wa-chat-btn .wa-circle::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: rgba(37,211,102,.25);
+    animation: waPing 1.8s ease-out infinite;
+}
+
+@keyframes waPing {
+    0%   { transform: scale(.8); opacity: .8; }
+    70%  { transform: scale(1.4); opacity: 0; }
+    100% { transform: scale(.8); opacity: 0; }
+}
+
+/* Label "Tanya Kila" */
+.wa-chat-btn .wa-label {
+    margin-top: 7px;
+    background: linear-gradient(135deg, #25d366, #128c3e);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(37,211,102,.35);
+    user-select: none;
+}
+
+/* Popup chat window */
+.wa-popup {
+    position: fixed;
+    bottom: 130px;
+    left: 28px;
+    z-index: 9999;
+    width: 320px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.18);
+    overflow: hidden;
+    transform: scale(0) translateY(30px);
+    transform-origin: bottom left;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), opacity 0.25s ease;
+}
+
+.wa-popup.open {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Header popup */
+.wa-popup-header {
+    background: linear-gradient(135deg, #25d366, #128c3e);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+}
+
+.wa-popup-header .wa-logo {
+    width: 46px;
+    height: 46px;
+    background: rgba(255,255,255,.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.wa-popup-header .wa-info .wa-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+}
+
+.wa-popup-header .wa-info .wa-status {
+    font-size: 12px;
+    color: rgba(255,255,255,.8);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.wa-popup-header .wa-info .wa-status .dot {
+    width: 8px;
+    height: 8px;
+    background: #a8ffbe;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: .3; }
+}
+
+/* Tombol tutup */
+.wa-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: rgba(255,255,255,.2);
+    border: none;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+    padding: 0;
+}
+
+.wa-popup-close:hover {
+    background: rgba(255,255,255,.35);
+}
+
+/* Balon chat */
+.wa-popup-body {
+    padding: 20px;
+    background: #e5ddd5;
+    min-height: 100px;
+}
+
+.wa-bubble {
+    background: #fff;
+    border-radius: 0 14px 14px 14px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.55;
+    box-shadow: 0 2px 5px rgba(0,0,0,.08);
+    max-width: 90%;
+    position: relative;
+}
+
+.wa-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 8px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.wa-bubble .wa-time {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    margin-top: 6px;
+}
+
+/* Footer input + tombol kirim */
+.wa-popup-footer {
+    padding: 12px 14px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wa-popup-footer input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    padding: 9px 16px;
+    font-size: 13px;
+    outline: none;
+    background: #fff;
+    transition: border-color .2s;
+    margin: 0;
+}
+
+.wa-popup-footer input:focus {
+    border-color: #25d366;
+}
+
+.wa-send-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: linear-gradient(135deg, #25d366, #128c3e);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s, box-shadow .2s;
+    padding: 0;
+}
+
+.wa-send-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(37,211,102,.5);
+}
+
+/* Overlay gelap saat popup terbuka di mobile */
+.wa-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.25);
+    z-index: 9998;
+}
+
+.wa-overlay.show {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .wa-popup {
+        left: 12px;
+        right: 12px;
+        width: auto;
+        bottom: 115px;
+    }
+    .wa-chat-btn {
+        left: 16px;
+        bottom: 18px;
+    }
+}
+

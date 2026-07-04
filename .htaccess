@@ -1,0 +1,42 @@
+# ============================================================
+#  KEAMANAN UTAMA — Sakila Store
+# ============================================================
+
+# Matikan directory listing
+Options -Indexes
+
+# Blokir akses langsung ke file sensitif
+<FilesMatch "\.(sql|log|env|bak|sh|git|php~|swp|ini)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Blokir akses ke folder database
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Paksa HTTPS (aktifkan di Hostinger)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^database/ - [F,L]
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # Content Security Policy — hanya izinkan resource dari domain sendiri + CDN yang dipakai
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://wa.me https://web.whatsapp.com; form-action 'self'; frame-ancestors 'none';"
+    # Hapus header yang bocorkan info server
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
+</IfModule>
+
+# Sembunyikan info PHP
+<IfModule mod_php.c>
+    php_flag expose_php Off
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>
